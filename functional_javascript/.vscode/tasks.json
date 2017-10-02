@@ -1,0 +1,15 @@
+{
+    "version" : "0.1.0",
+    "command" : "node",
+    "isShellCommand": true,
+    "args" : [
+        "--harmony"
+    ],
+    "tasks": [
+        {
+            "taskName" : "runFile",
+            "isTestCommand": true,
+            "showOutput": "always"
+        }
+    ]
+}
