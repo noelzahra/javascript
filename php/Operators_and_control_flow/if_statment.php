@@ -1,7 +1,18 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: noelzahra
- * Date: 06/08/2017
- * Time: 11:46
- */
+//if statement
+
+$authors = ["Ernest Hemingway", "Joseph Heller", "Mark Twain", "Michael Chabon", "Ayn Rand"];
+$count = count($authors);
+
+if ($count == 1)
+{
+    echo "There's only one author";
+}
+elseif ($count > 1)
+{
+    echo "Total elements in array is $count";
+}
+else
+{
+    echo "The array is empty.";
+}

@@ -1,7 +1,17 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: noelzahra
- * Date: 05/08/2017
- * Time: 17:29
- */
+//Static properties
+
+class Author
+{
+    public static $centuryPopular = "19th";
+
+    public static $fullName = "Ernest Hemingway";
+
+    public static function getFullName()
+    {
+        return self::$fullName;
+    }
+}
+
+echo Author::$centuryPopular.PHP_EOL;
+echo Author::getFullName();

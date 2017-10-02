@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Pseudo-class selector</title>
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" type="text/css" href="stylesheets/main.css">
+
+  <!-- Javascript -->
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+  <script type="text/javascript" src="js/filter.js"></script>
+
+  <!--[if lt IE 9]>
+  <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+
+</head>
+<body>
+  <main>
+  <!-- Navigation -->
+    <nav class="nav-bar">
+      <a href="http://api.jquery.com" target="_blank"><img class="logo" src="assets/css3-logo.png"></a>
+      <ul class="links">
+        <li>
+            <a href="index.html">css basics</a>
+        </li>
+        <li>
+            <a href="combinators.html">Combinators</a>
+        </li>
+        <li>
+            <a href="attribute.html">Attribute selectors</a>
+        </li>
+        <li>
+            <a href="pseudo-class-selectors.html">Pseudo-class selectors</a>
+        </li>
+        <li>
+            <a href="pseudo-elements-selectors.html">Pseudo-elements selectors</a>
+        </li>
+        <li>
+            <a href="keyboard_events.html">Keyboard events</a>
+        </li>
+        <li>
+            <a href="link_layover.html">Link layover</a>
+        </li>
+        <li>
+            <a href="css_styles.html">Methods with CSS styles</a>
+        </li>
+      </ul>
+
+      <div class="footer">
+        <p>&copy; 2014 Noel Zahra</p>
+      </div>
+    </nav>
+
+  <!-- Content -->
+    <div class="container intro">
+    <h1>Pseudo-class selector</h1>
+    <section>
+      <p>A pseudo-class selector acts as if you have added a class to an element in your markup. Link elements have pseudo-class selector, according to state. To use a pseudo-class we append it to the element we want to target with a colon :.</p>
+        <pre>
+          <code>
+            a:link {}
+            a:visited {}
+            a:hover {}
+          </code>
+        </pre>
+      </section>
+
+    <section>
+    <h3>:first-child</h3>
+    <p>Target an element when it is the first child of a parent.</p>
+    <div class="col-md-3">
+      <pre>
+        <code>
+          .wrapper p:first-child { }
+        </code>
+      </pre>
+    </div>
+  </section>
+
+    <section>
+    <h3>:last-child</h3>
+    <p>Target an element when it is the last child of a parent.</p>
+    <div class="col-md-3">
+      <pre>
+        <code>
+          .wrapper p:last-child { }
+        </code>
+      </pre>
+    </div>
+  </section>
+
+    <section>
+    <h3>:nth-child</h3>
+    <p>Select multiple elements according to their position in the document tree.</p>
+    <div class="col-md-3">
+    <p>You can select even or odd rows</p>
+      <pre>
+        <code>
+          tr:nth-child(odd)  { }
+          tr:nth-child(even)  { }
+        </code>
+      </pre>
+      <p>Or a specific row, in this example we're only selecting row 2</p>
+      <pre>
+        <code>
+          tr:nth-child(2)  { }
+        </code>
+      </pre>
+      <p>Or a specific row, in this example we're only selecting row 2</p>
+      <pre>
+        <code>
+          tr:nth-child(2n+1) td { }
+        </code>
+      </pre>
+    </div>
+  </section>
+
+  <section>
+    <h3>:nth-of-type</h3>
+    <p>Select multiple elements according to their position in the document tree BUT only those elements that are the same as the type the rule is applied to. In this example apply CSS to every other paragraph but ignore the headings I could use the following selector.</p>
+    <div class="col-md-3">
+      <pre>
+        <code>
+          p:nth-of-type(odd) { }
+        </code>
+      </pre>
+    </div>
+  </section>
+
+  <section>
+    <h3>:only-child</h3>
+    <p>The only-child pseudo-class will match if the element is the only child of the parent - for example a list with only one list item.</p>
+    <div class="col-md-3">
+      <pre>
+        <code>
+         li:only-child { }
+        </code>
+      </pre>
+    </div>
+  </section>
+
+  <section>
+    <h3>:empty</h3>
+    <p>The empty pseudo-class will match if an element is completely empty or just contains an HTML comment.</p>
+    <div class="col-md-3">
+      <pre>
+        <code>
+         p:empty { }
+        </code>
+      </pre>
+    </div>
+  </section>
+
+  <section>
+    <h3>:not</h3>
+    <p>The not pseudo-class allows you to do something if a selector does not match. The selector you wish to exclude goes inside the round braces.</p>
+    <div class="col-md-3">
+      <pre>
+        <code>
+         td:not(.animal) { font-weight: bold; }
+        </code>
+      </pre>
+    </div>
+  </section>
+
+    </div>
+  <!-- END:Content -->
+  </main>
+
+</body>
+</html>

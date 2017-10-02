@@ -1,0 +1,29 @@
+/* Styles for Pseudo-elements styles section */
+
+.wrapper {
+  width: 500px;
+  height: 200px;
+  background-color: purple;
+}
+
+.story {
+  font-family: 'Georgia', serif;
+  font-size: 1.4em;
+  line-height: 1.6em;
+  color: #fff;
+  padding: 2em;
+}
+
+.story::before {
+  content: "Once upon a time";
+  display: block;
+  color: cyan;
+  font-style: italic;
+}
+
+.story::after {
+  content: "The End.";
+  display: block;
+  color: yellow;
+  font-style: italic;
+}

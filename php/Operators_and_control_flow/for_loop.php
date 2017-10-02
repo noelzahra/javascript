@@ -1,7 +1,11 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: noelzahra
- * Date: 06/08/2017
- * Time: 15:10
- */
+// For loop
+
+$authors = ["Ernest Hemingway", "Joseph Heller", "Mark Twain", "Michael Chabon", "Ayn Rand"];
+
+
+for ($i = 0; $i < count($authors); $i++)
+{
+    echo $authors[$i].PHP_EOL;
+
+}

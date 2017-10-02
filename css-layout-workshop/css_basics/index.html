@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>css Basics</title>
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" type="text/css" href="stylesheets/main.css">
+  <link rel="stylesheet" type="text/css" href="stylesheets/basic-css-styles.css">
+
+ <!--[if lt IE 9]>
+  <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+
+</head>
+<body>
+  <main>
+  <!-- Navigation -->
+    <nav class="nav-bar">
+      <a href="https://developer.mozilla.org/en/docs/Web/CSS/CSS3" target="_blank"><img class="logo" src="assets/css3-logo.png"></a>
+      <ul class="links">
+        <li>
+            <a href="index.html">css basics</a>
+        </li>
+        <li>
+            <a href="combinators.html">Combinators</a>
+        </li>
+        <li>
+            <a href="attribute.html">Attribute selectors</a>
+        </li>
+        <li>
+            <a href="pseudo-class-selectors.html">Pseudo-class selectors</a>
+        </li>
+        <li>
+            <a href="pseudo-elements-selectors.html">Pseudo-elements selectors</a>
+        </li>
+        <li>
+            <a href="keyboard_events.html">Keyboard events</a>
+        </li>
+        <li>
+            <a href="link_layover.html">Link layover</a>
+        </li>
+        <li>
+            <a href="css_styles.html">Methods with CSS styles</a>
+        </li>
+      </ul>
+
+      <div class="footer">
+        <p>&copy; 2014 Noel Zahra</p>
+      </div>
+    </nav>
+
+
+<!-- Content -->
+  <div class="container intro">
+    <h1>css Basics</h1>
+    <section>
+      <p>Basic css selectors are element, class and ID selectors</p>
+    </section>
+
+    <section>
+    <h3>Element selectors</h3>
+    <p>Element selectors are the most basic selectors. Element selectors will apply CSS to every instance of that element in your document.</p>
+    <pre>
+      <code>
+        p {}
+        h1 {}
+        div {}
+      </code>
+    </pre>
+    </section>
+
+    <section>
+      <h3>Class Selector</h3>
+      <p>Add your class to multiple items in one HTML document, and the selector will select all of them and apply the same styles to each.</p>
+      <ul id="destinations">
+        <li><p class="red">This list item is red.</p></li>
+        <li>
+          <div class="panel">
+            <p>Panel Area</p>
+          </div>
+        </li>
+        <li>
+          <h3 class="bold">List heading</h3>
+          <p class="description">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+          tempor incididunt ut labore et dolore magna aliqua.
+          </p>
+        </li>
+      </ul>
+      <pre>
+        <code>
+          .panel { color: rgb(210, 10, 10); }
+          p.red {  width: 300px;
+                   height: 300px;
+                   background-color: #4393E6;
+                   color: #ffeeff;
+                  }
+          h1.bold { font-weight: bold; }
+        </code>
+      </pre>
+    </section>
+
+    <section>
+      <h3>ID Selector</h3>
+      <p>An ID can only be used once per document, therefore would not be an ideal choice for our class of .box which we might want to reuse on several elements. An ID also gives the element higher specificity, which can make it difficult to overwrite the styles later. You can still add a class and apply your CSS via the class selector.</p>
+      <div id="box">
+        <p>ID Selector</p>
+      </div>
+      <pre>
+        <code>
+          $('#second-destinations > li').css({'list-style' : 'none'});
+        </code>
+      </pre>
+    </section>
+  </div>
+<!-- END:Content -->
+
+  </main>
+</body>
+</html>

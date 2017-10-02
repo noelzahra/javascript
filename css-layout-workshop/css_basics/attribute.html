@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Attribute Selectors</title>
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" type="text/css" href="stylesheets/main.css">
+
+  <!-- Javascript -->
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+  <script type="text/javascript" src="js/events.js"></script>
+
+  <!--[if lt IE 9]>
+  <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+
+</head>
+<body>
+  <main>
+  <!-- Navigation -->
+    <nav class="nav-bar">
+      <a href="https://developer.mozilla.org/en/docs/Web/CSS/CSS3" target="_blank"><img class="logo" src="assets/css3-logo.png"></a>
+      <ul class="links">
+        <li>
+            <a href="index.html">css3 basics</a>
+        </li>
+        <li>
+            <a href="combinators.html">Combinators</a>
+        </li>
+        <li>
+            <a href="attribute.html">Attribute selectors</a>
+        </li>
+        <li>
+            <a href="pseudo-class-selectors.html">Pseudo-class selectors</a>
+        </li>
+        <li>
+            <a href="pseudo-elements-selectors.html">Pseudo-elements selectors</a>
+        </li>
+        <li>
+            <a href="keyboard_events.html">Keyboard events</a>
+        </li>
+        <li>
+            <a href="link_layover.html">Link layover</a>
+        </li>
+        <li>
+            <a href="css_styles.html">Methods with CSS styles</a>
+        </li>
+      </ul>
+
+      <div class="footer">
+        <p>&copy; 2014 Noel Zahra</p>
+      </div>
+    </nav>
+
+
+<!-- Content -->
+  <div class="container intro">
+    <h1>Attribute Selectors</h1>
+    <section>
+      <p>Attribute selectors give us the ability to target an element based on the attributes it has. These are very useful when styling forms.</p>
+        <pre>
+          <code>
+            input[type="text"], input[type="email"] { display: block;}
+          </code>
+        </pre>
+        <p>Selecting attributes with a particular class only</p>
+        <pre>
+          <code>
+            *[class="box"] { border: 2px solid grey;}
+          </code>
+        </pre>
+        <p>Selecting attributes with a particular class and any other class listed with it</p>
+        <pre>
+          <code>
+            *[class~="box"] { border: 2px solid grey;}
+          </code>
+        </pre>
+    </section>
+
+    <section>
+    <h3>Attributes with a element href attributes</h3>
+    <p>Selecting all attributes starting with http, including https</p>
+        <pre>
+          <code>
+            a[href^="http"] { color: red; }
+          </code>
+        </pre>
+      <p>Selecting all attributes ending with .com</p>
+        <pre>
+          <code>
+            a[href$=".com"] { color: blue; }
+          </code>
+        </pre>
+      <p>Selecting all attributes conating a .com</p>
+        <pre>
+          <code>
+            a[href*=".com"] { color: green; }
+          </code>
+        </pre>
+      <p>Selecting all attributes with http, HTTP ot Http in a case insesitive match </p>
+        <pre>
+          <code>
+            a[href^="http" i] { color: blue; }
+          </code>
+        </pre>
+      </section>
+  </div>
+<!-- END:Content -->
+</main>
+</body>
+</html>

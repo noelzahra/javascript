@@ -1,7 +1,13 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: noelzahra
- * Date: 04/08/2017
- * Time: 19:02
- */
+// Array with a key value pair: "this string" =>(refers) "value"
+// Each ley refers to a specific value
+
+$authors = array(
+    "quarky" => "Charles Dickens",
+    "brilliant" => "Jane Austin",
+    "poetic" => "TS Eliot",
+    "Mark Twain"
+);
+
+print_r($authors);
+echo $authors['poetic'];

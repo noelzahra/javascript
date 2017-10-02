@@ -1,7 +1,5 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: noelzahra
- * Date: 09/08/2017
- * Time: 23:31
- */
+// strpos function
+
+$string = "To be or not to be that is the question";
+echo strpos($string, "be", 5);

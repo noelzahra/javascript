@@ -1,7 +1,11 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: noelzahra
- * Date: 11/08/2017
- * Time: 21:56
- */
+// Control flow
+//Increment and decrement
+
+$alterByOne = 2;
+$alterByOne ++;
+echo $alterByOne.PHP_EOL;
+
+$alterByOne --;
+echo $alterByOne;
+

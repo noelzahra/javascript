@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Pseudo-elements selectors</title>
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" type="text/css" href="stylesheets/main.css">
+  <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="stylesheets/pseudo-elements-styles.css">
+
+  <!--[if lt IE 9]>
+  <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+
+</head>
+<body>
+  <main>
+  <!-- Navigation -->
+    <nav class="nav-bar">
+      <a href="https://developer.mozilla.org/en/docs/Web/CSS/CSS3" target="_blank"><img class="logo" src="assets/css3-logo.png"></a>
+      <ul class="links">
+        <li>
+            <a href="index.html">css3 basics</a>
+        </li>
+        <li>
+            <a href="combinators.html">Combinators</a>
+        </li>
+        <li>
+            <a href="attribute.html">Attribute selectors</a>
+        </li>
+        <li>
+            <a href="pseudo-class-selectors.html">Pseudo-class selectors</a>
+        </li>
+        <li>
+            <a href="pseudo-elements-selectors.html">Pseudo-elements selectors</a>
+        </li>
+        <li>
+            <a href="keyboard_events.html">Keyboard events</a>
+        </li>
+        <li>
+            <a href="link_layover.html">Link layover</a>
+        </li>
+        <li>
+            <a href="css_styles.html">Methods with CSS styles</a>
+        </li>
+      </ul>
+
+      <div class="footer">
+        <p>&copy; 2014 Noel Zahra</p>
+      </div>
+    </nav>
+
+  <!-- Content -->
+    <div class="container intro vacations">
+      <h1>Pseudo-elements selectors</h1>
+      <section class="col-md-3">
+        <p>Pseudo-elements match virtual elements that do not exist in the document tree. A pseudo-class acts as if we have added a class to an element that is already in the document. A pseudo-element acts as if a whole new element was inserted, then CSS applied. The ::selection pseudo-element always starts with ::</p>
+      </section>
+
+      <section class="col-md-3">
+        <h3>::first-letter</h3>
+        <p>The first-letter selector targets that first-letter without the need of the span. Useful when creating a drop-caps.</p>
+        <pre>
+          <code>
+            .intro::first-letter { font-size: 200%; };
+          </code>
+        </pre>
+      </section>
+
+      <section class="col-md-3">
+        <h3>::first-line</h3>
+        <p>The first-line pseudo-element selects the first formatted line of text.</p>
+        <pre>
+          <code>
+            .intro::first-line { font-size: 200%; font-weight: bold; };
+          </code>
+        </pre>
+      </section>
+
+      <section class="col-md-3">
+        <h3>::before and ::after</h3>
+        <p>The ::before and ::after pseudo-elements give us the ability to insert generated content before and after another element. ::before style inserts content before the targeted class.</p>
+        <pre>
+          <code>
+          .story::before {
+                       content: "Once upon a time.";
+                        display: block;
+                        color: cyan;
+                        font-style: italic;
+                      }
+          </code>
+        </pre>
+        <div class="wrapper">
+          <p class="story">This is my very short story.</p>
+        </div>
+        <p>::after inserts content after the targeted class</p>
+        <pre>
+          <code>
+          .story::after {
+                       content: "The End.";
+                        display: block;
+                        color: yellow;
+                        font-style: italic;
+                      }
+          </code>
+        </pre>
+      </section>
+
+    </div>
+  <!-- END:Content -->
+  </main>
+
+</body>
+</html>

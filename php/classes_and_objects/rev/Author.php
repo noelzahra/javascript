@@ -1,7 +1,18 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: noelzahra
- * Date: 15/08/2017
- * Time: 13:40
- */
+//Author Class
+
+require "Person.php";
+
+class Author extends Person
+{
+    private $pname = "Bond";
+
+    public function getCompleteName()
+    {
+        return $this->getFullName()." a.k.a. ".$this->pname;
+    }
+}
+
+
+$newBond = new Author("Sean", "Connery");
+echo $newBond->getCompleteName();

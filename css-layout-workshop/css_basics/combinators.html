@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Combinators</title>
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" type="text/css" href="stylesheets/main.css">
+  <link rel="stylesheet" type="text/css" href="stylesheets/combinators-styles.css">
+
+ <!--[if lt IE 9]>
+  <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+
+</head>
+<body>
+  <main>
+  <!-- Navigation -->
+    <nav class="nav-bar">
+      <a href="https://developer.mozilla.org/en/docs/Web/CSS/CSS3" target="_blank"><img class="logo" src="assets/css3-logo.png"></a>
+      <ul class="links">
+        <li>
+            <a href="index.html">css3 basics</a>
+        </li>
+        <li>
+            <a href="combinators.html">Combinators</a>
+        </li>
+        <li>
+            <a href="attribute.html">Attribute selectors</a>
+        </li>
+        <li>
+            <a href="pseudo-class-selectors.html">Pseudo-class selectors</a>
+        </li>
+        <li>
+            <a href="pseudo-elements-selectors.html">Pseudo-elements selectors</a>
+        </li>
+        <li>
+            <a href="keyboard_events.html">Keyboard events</a>
+        </li>
+        <li>
+            <a href="link_layover.html">Link layover</a>
+        </li>
+        <li>
+            <a href="css_styles.html">Methods with CSS styles</a>
+        </li>
+      </ul>
+
+      <div class="footer">
+        <p>&copy; 2014 Noel Zahra</p>
+      </div>
+    </nav>
+
+
+<!-- Content -->
+  <div class="container intro">
+    <h1>Combinators</h1>
+    <section>
+      <p>Combinators are complex selectors give you ways to select elements based on where they are in the document. There are four different types of combinators.</p>
+      <ul class="list types">
+        <li>Descendant Selector</li>
+        <li>Child Selector</li>
+        <li>Adjacent Sibling</li>
+        <li>General Sibling</li>
+      </ul>
+    </section>
+
+    <section>
+      <h3>Descendant Selector</h3>
+      <p>Select all elements that are descendants of a specified parent. When you use a descendant selector you can specify a parent selector and then the element that you wish to style.</p>
+      <pre>
+        <code>
+          .box  p {}
+           &lt;div class="box"&gt;
+              &lt;p&gt;Content inside the box class.&lt;/p&gt;
+            &lt;/div&gt;
+        </code>
+      </pre>
+      <div class="box">
+        <p>Content inside box</p>
+      </div>
+      <p>You can have more than one descendant in the list.</p>
+      <pre>
+        <code>
+          .box  ul li {}
+        </code>
+      </pre>
+    </section>
+
+    <section>
+      <h3>Child Selector</h3>
+      <p>Select all elements that are immediate children of a specified parent. This will only select the li elements that are a direct child of .countries. If there is another element in-between then the li will not be selected.</p>
+      <pre>
+        <code>
+         .countries > li {}
+        </code>
+      </pre>
+      <ul class="countries">
+        <li>Germany</li>
+        <li>Italy
+          <ul>
+            <li>Florence</li>
+            <li>Milan</li>
+            <li>Venice</li>
+          </ul>
+        </li>
+        <li>Sweden</li>
+      </ul>
+        <pre>
+          <code>
+            .countries > li { list-style: none; color: #333333; }
+            .countries > li > ul > li { list-style: katakana; color: red; }
+          </code>
+        </pre>
+    </section>
+
+   <section>
+      <h3>Adjacent Sibling Selector</h3>
+      <p>Select elements that are the adjacent siblings of an element. The adjacent sibling selector is a useful selector that enables the selection of an element when it is next to another element. This is how we can deal with things like stacked headings in CSS</p>
+      <pre>
+        <code>
+         h2 + p { }
+        </code>
+      </pre>
+      <p>A common request is to make the paragraph that comes directly after a heading different in some way, to make it stand out. That can be achieved with an adjacent sibling, the following selector selects the p element only when it comes after an h4.</p>
+      <div class="story">
+        <div class="content">
+          <h4>Market profile</h4>
+          <p>Trading with the market profile have proven to be more reliable than other techniques.</p>
+          <p>Trading with the market profile have proven to be more reliable than other techniques.</p>
+        </div>
+      </div>
+        <pre>
+          <code>
+            h4 + p {
+                      color: red;
+                      font-family: 'Helvetica', Arial, sans-serif;
+                      font-size: 1.1em;
+                      line-height: 1.4em;
+                    }
+          </code>
+        </pre>
+    </section>
+
+   <section>
+      <h3>General Sibling</h3>
+      <p>Select elements that are the siblings of an element. The general sibling selector works in a similar way to adjacent sibling but will select all siblings that come after the specified element.</p>
+      <pre>
+        <code>
+        h2 ~ p { }
+        </code>
+      </pre>
+      <p>If I want to select all p elements that come after an h2</p>
+      <div class="story">
+        <div class="content">
+          <h2>Market profile</h2>
+          <p>Trading with the market profile have proven to be more reliable than other techniques.</p>
+          <p>Trading with the market profile have proven to be more reliable than other techniques.</p>
+        </div>
+      </div>
+        <pre>
+          <code>
+            h2 ~ p {
+                      color: red;
+                      font-family: 'Helvetica', Arial, sans-serif;
+                      font-size: 1.1em;
+                      line-height: 1.4em;
+                    }
+          </code>
+        </pre>
+    </section>
+  </div>
+<!-- END:Content -->
+  </main>
+</body>
+</html>
